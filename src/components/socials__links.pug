@@ -1,0 +1,6 @@
+ul.socials__links--list
+    - var socials = [{name: 'insta', link: '#'}, {name: 'vk', link: '#'}, {name: 'github', link: '#'}];
+    each item in socials
+            li.socials__links--item
+                a(href=item.link).socials__links--link
+                    +icon(`${item.name}`, 'socials__icon')

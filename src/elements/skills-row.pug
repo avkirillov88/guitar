@@ -1,0 +1,7 @@
+mixin skills-row(rowName, skills)
+    .skills__circles--row
+        h5.skills__circles--title= rowName
+        .skills__circles--info
+            each item in skills
+                include skills-circle
+                +skills-circle(item)
