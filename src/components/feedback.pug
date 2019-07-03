@@ -1,0 +1,16 @@
+section.feedback
+    h4.feedback__title.title Связаться со мной
+    form.feedback__form
+        label.feedback__block
+            .feedback__label--text
+            +icon('user')
+            input.feedback__name(type='text' name ='name' placeholder='тест')
+        label.feedback__block
+            .feedback__label--text
+            +icon('message')
+            input.feedback__name(type='email' name ='email' placeholder='тест')
+        label.feedback__block
+            .feedback__label--text
+            +icon('envelope')
+            textarea.feedback__name(name ='text') Тестовый текст
+        button(type='submit') Отправить    
