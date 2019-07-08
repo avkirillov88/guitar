@@ -1,6 +1,7 @@
-nav.main__menu
-    ul.main__menu--list
-        - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
-        each item in menu
-            li.main__menu--item
-                a(href='').main__menu--link= item
+mixin mainmenu(mod)
+    nav(class='main__menu main__menu' + mod)
+        ul(class='main__menu--list main__menu--list' + mod)
+            - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+            each item in menu
+                li(class='main__menu--item main__menu--item' + mod)
+                    a(href='').main__menu--link= item

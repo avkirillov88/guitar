@@ -1,0 +1,99 @@
+.main {
+
+    &__menu{
+        display: flex;
+        width: 65%;
+
+        &--list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            &--footer {
+                flex-direction: row;
+
+                @include desktop() {
+                    justify-content: flex-start;
+                }
+
+                @include tablets() {
+                    flex-wrap: wrap;
+                }
+
+                @include phones() {
+                    width: 100%;
+                }
+            }
+        }
+
+        &--item {
+
+            margin-right: 4%;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include phones {
+                margin-right: 0;
+            }
+
+            &--footer {
+
+                @include desktop() {
+                    margin-right: 8%;
+                }
+
+                @include tablets() {
+                    width: 25%;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+
+                @include phones() {
+                    width: 50%;
+                    margin-bottom: 27px;
+
+                    &:nth-last-child(-n+2) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &--link {
+            color: $whitecolour;
+            text-decoration: none;
+
+            &:hover {
+                color: $hoverlinks;
+                padding-bottom: 45px;
+                border-bottom: 3px solid $hoverlinks;
+
+                @include phones() {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &--footer {
+            margin-bottom: 70px;
+
+            @include desktop() {
+                margin-bottom: 65px;
+                width: 100%;
+            }
+
+            @include tablets() {
+                width: 100%;
+                margin-bottom: 26px;
+            }
+
+            @include phones() {
+                margin-bottom: 44px;
+            }
+        }
+    }
+}

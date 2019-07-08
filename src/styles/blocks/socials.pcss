@@ -1,0 +1,68 @@
+.socials {
+
+    &__links {
+
+        &--list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-right: 1%;
+        }
+
+        &--link {
+
+            &--footer {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 26px;
+                border: 1px solid $purplecolour;
+                border-radius: 50%;
+
+                &:hover {
+                    border-color: $hoverlinks;
+                }
+            }
+        }
+
+        &--item {
+            margin-right: 46px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &--footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include desktop() {
+                    margin-right: 16px;
+                }
+
+                @include tablets() {
+                    margin-right: 26px;
+                }
+                
+                @include tablets() {
+                    margin-right: 26px;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        fill: $purplecolour;
+        width: 27px;
+
+        &:hover {
+            fill: $hoverlinks;
+        }
+
+        &--footer {
+            position: absolute;
+        }
+    }
+}

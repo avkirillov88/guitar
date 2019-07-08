@@ -10,13 +10,14 @@ html(lang="ru")
   body
     .wrapper
       .maincontent
-        include components/header
-        include components/fullscreen
-        include components/hero
+        .maincontent__main--bg
+          include components/fullscreen
+          include components/hero
         include components/skills
         include components/works
-        include components/reviews
-        include components/feedback
+        .maincontent__guitars--bg
+          include components/reviews
+          include components/feedback
         include components/footer
         //- +image('content/user.jpg', 'user-pic')
         //- +icon('link', 'link-class')

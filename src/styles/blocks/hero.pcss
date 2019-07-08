@@ -1,0 +1,128 @@
+.hero {
+
+    padding-bottom: 10%;
+
+    &__wrap {
+        display: flex;
+        width: 100%;
+
+        @include phones() {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__men {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 36%;
+        margin-right: 5%;
+
+        @include desktop() {
+            align-items: center;
+            margin-right: 0;
+        }
+
+        @include phones() {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 216px;
+        height: 216px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15%;
+    }
+
+    &__data {
+
+        width: 68%;
+
+        @include desktop() {
+            width: 100%;
+            padding-left: 3.5%;
+        }
+
+        @include phones() {
+            padding-left: 0;
+        }
+    }
+
+    &__table {
+        width: 100%;
+        border-spacing: 15px;
+    }
+
+    &__row {
+        text-align: right;
+
+        @include desktop() {
+            text-align: left;
+        }
+
+        &--name {
+            opacity: 0.15;
+            font-weight: 600;
+            color: $whitecolour;
+        }
+
+        &--text {
+            font-weight: 600;
+            color: $whitecolour;
+
+            @include phones() {
+                text-align: left;
+            }
+        }
+    }
+
+    &__content {
+        width: 64%;
+        display: flex;
+        justify-content: center;
+
+        @include desktop() {
+            padding-left: 7%;
+        }
+
+        @include phones() {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    &__welcome {
+        width: 100%;
+        margin-bottom: 18px;
+        opacity: 0.5;
+        font-weight: 600;
+        line-height: 1.88;
+        color: $whitecolour;
+    }
+
+    &__name {
+        width: 100%;
+        font-size: 36px;
+        font-weight: 700;
+        color: $whitecolour;
+        margin-bottom: 4.5%;
+    }
+
+    &__text {
+        margin-bottom: 10.5%;
+        width: 80%;
+
+        @include desktop() {
+            margin-bottom: 13%;
+        }
+    }
+
+    &__desc {
+        width: 84%;
+        font-style: italic;
+    }
+}

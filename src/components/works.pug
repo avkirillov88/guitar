@@ -1,8 +1,8 @@
 section.works
     h3.works__title Мои работы
-    .container
-        - var selNumber = 4
+    .works__container
         .works__slider
+            - var selNumber = 2
             .works__slider--number= selNumber
             .works__slider--img
                 +image('content/slider-1.jpg')
@@ -14,11 +14,11 @@ section.works
                             - var selClass = ' works__slider--thumb--selected'
                         div(class='works__slider--thumb'+selClass)
                             +image('content/thumb-'+thumb+'.jpg')
-            .works__slider--arrows
-                .works__slider--arrow.works__slider--arrow--next
-                    +icon('arrow-down')
-                .works__slider--arrow.works__slider--arrow--previous
-                    +icon('arrow-down')
+                .works__slider--arrows
+                    button.works__slider--arrow.works__slider--arrow--next
+                        +icon('arrow-down', 'works__slider--icon')
+                    button.works__slider--arrow.works__slider--arrow--previous
+                        +icon('arrow-down', 'works__slider--icon')
         .works__description
             .works__description--tags
                 -var tags = ['HTML', 'CSS', 'Javascript']
@@ -27,5 +27,5 @@ section.works
             h4.works__description--title Сайт школы образования
             .works__description--info.text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
             .works__description--link
-                +icon('link')
+                +icon('link', 'works__description--icon')
                 a(href="/") Посмотреть сайт

@@ -1,0 +1,228 @@
+.reviews {
+
+    width: 100%;
+    padding: 145px 30px;
+
+    @include tablets() {
+        padding: 140px 0 0 20px;
+        margin-bottom: 165px;
+    }
+
+    @include phones() {
+        padding: 100px 0 0 8px;
+        margin-bottom: 165px;
+    }
+
+    &__title {
+        margin-right: 30px;
+        margin-bottom: 68px;
+        font-size: 36px;
+        color: $whitecolour;
+        font-weight: bold;
+
+        @include desktop() {
+            margin-right: 11%;
+        }
+
+        @include tablets() {
+            margin-right: 62px;
+        }
+
+        @include phones {
+            width: 100%;
+            font-size: 28px;
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+
+        &--wrap {
+            display: flex;
+
+            @include desktop() {
+                margin-bottom: 35px;
+            }
+
+            @include tablets() {
+                margin-bottom: 0;
+            }
+
+            @include phones {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__slider {
+
+        &--controls {
+            display: flex;
+
+            @include phones {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 27px;
+            }
+        }
+
+        &--list {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            justify-content: flex-start;
+        }
+
+        &--item {
+            display: flex;
+            width: 50%;
+            position: relative;
+            padding-left: 100px;
+
+            @include desktop() {
+                width: 46%;
+            }
+
+            @include tablets() {
+                padding-left: 50px;
+            }
+
+            @include phones() {
+                padding-left: 0;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 72px;
+                height: 72px;
+                background: svg-load('quote.svg', fill=$text-color, width=100%, height=100%) center center no-repeat;
+
+                @include tablets() {
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                @include phones() {
+                    display: none;
+                    left: -2%;
+                }
+            }
+
+            @include phones() {
+                min-width: 100%;
+            }
+        }
+    }
+
+    &__btn {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $whitecolour;
+        border-radius: 50%;
+        position: relative;
+
+        &:hover {
+            border-color: $hoverlinks;
+
+            &:before {
+                background: svg-load('arrow-down.svg', fill=$whitecolour, width=100%, height=100%);
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: ""; 
+            background: svg-load('arrow-down.svg', fill=$whitecolour, width=100%, height=100%);
+            width: 10px;
+            height: 10px;
+
+            &:hover {
+                fill: $hoverlinks;
+            }
+        }
+
+        &--prev {
+            margin-right: 30px;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__item {
+
+        &--wrap {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include desktop() {
+            width: 80%;
+        }
+
+        @include tablets() {
+            margin-bottom: 18px;
+
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-bottom: 30px;
+            line-height: 1.71;
+        }
+    }
+
+    &__author {
+
+        &--wrap {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        &--img {
+            width: 75px;
+            height: 75px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 30px;
+
+            @include phones {
+                width: 55px;
+                height: 55px;
+                margin-right: 22px;
+            }
+        }
+
+        &--bio {
+            padding-top: 5px;
+        }
+
+        &--name {
+            font-size: 18px;
+            font-weight: bold;
+            color: $whitecolour;
+            margin-bottom: 15px;
+
+            @include phones {
+                margin-bottom: 8px;
+            }
+        }
+
+        &--position {
+            opacity: 0.3;
+            font-size: 16px;
+            font-weight: 600;
+            color: $whitecolour;
+        }
+    }
+}

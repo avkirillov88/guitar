@@ -1,0 +1,192 @@
+.footer {
+    width: 100%;
+    justify-content: space-between;
+    padding: 100px 150px;
+    background-color: $darkpurple;
+
+    @include desktop() {
+        padding: 75px 28px;
+    }
+
+    @include tablets() {
+        padding: 60px 20px;
+    }
+
+    @include phones() {
+        padding: 60px 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include phones() {
+            flex-direction: column;
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        width: 30%;
+
+        @include desktop() {
+            width: 25%;
+            flex-direction: column;
+        }
+
+        @include tablets() {
+            width: 30%;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__year {
+        color: $purplecolour;
+        font-size: 48px;
+        font-weight: 600;
+        width: 100%;
+
+        @include desktop() {
+            margin-bottom: 10px;
+        }
+
+        @include tablets() {
+            margin-bottom: 14px;
+        }
+
+        @include phones() {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__name {
+        font-size: 18px;
+        font-weight: bold;
+        color: $whitecolour;
+        text-transform: uppercase;
+        width: 75%;
+
+        @include desktop() {
+            width: 70%;
+            line-height: 1.67;
+            margin-bottom: 21px;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        opacity: 0.15;
+        color: $whitecolour;
+
+        @include desktop() {
+            width: 70%;
+            line-height: 1.88;
+        }
+
+        @include tablets() {
+            line-height: 1.88;
+        }
+    }
+
+    &__content {
+        width: 66%;
+
+        @include desktop() {
+            width: 74%;
+            padding-top: 6px;
+        }
+
+        @include tablets() {
+            width: 66%;
+        }
+
+        @include phones() {
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @include desktop() {
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        @include tablets() {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+
+        @include desktop() {
+            width: 46%;
+        }
+
+        @include tablets() {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 25px;
+
+        @include desktop() {
+            width: 90%;
+        }
+
+        @include tablets() {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__socials {
+
+        @include tablets() {
+            margin-bottom: 60px;
+        }
+
+        @include phones() {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__quote {
+        margin: 0;
+
+        &--text {
+            line-height: 1.71;
+
+            @include desktop() {
+                margin-bottom: 35px;
+            }
+
+            @include tablets() {
+                margin-bottom: 20px;
+            }
+
+            @include phones() {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__author {
+        color: $whitecolour;
+    }
+}

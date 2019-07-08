@@ -1,11 +1,14 @@
 section.skills
-    .skills__title
-        h4 Чем я могу быть полезен Вам
-        .skills__desc.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-    .skills__circles
-        .skills__circles--wrap
-            include ..//elements/skills-row
-            - var frontSkills = [{name: 'HTML5', val: 40}, {name: 'CSS3', val: 40}, {name: 'Javascript', val: 40}, {name: 'Jquery и Vue.js', val: 40}]
-            - var workFlow = [{name: 'Git', val: 40}, {name: 'Terminal', val: 40}, {name: 'Gulp', val: 40}, {name: 'Webpack', val: 40}]
-            +skills-row('Front-end', frontSkills)
-            +skills-row('Workflow', workFlow)
+    .skills__img
+        +image('content/guitar-p.png', 'skills__img--pic')
+    .skills__desc
+        .skills__title
+            h4 Чем я могу быть полезен Вам
+            .skills__desc.text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .skills__circles
+            .skills__circles--wrap
+                include ..//elements/skills-row
+                - var frontSkills = [{name: 'HTML5', val: 40}, {name: 'CSS3', val: 40}, {name: 'Javascript', val: 40}, {name: 'Jquery и Vue.js', val: 40}]
+                - var workFlow = [{name: 'Git', val: 40}, {name: 'Terminal', val: 40}, {name: 'Gulp', val: 40}, {name: 'Webpack', val: 40}]
+                +skills-row('Front-end', frontSkills)
+                +skills-row('Workflow', workFlow)
