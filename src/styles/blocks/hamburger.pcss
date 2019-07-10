@@ -1,7 +1,6 @@
 .hamburger__menu{
     position: relative;
-    width: 50px;
-    height: 30px;
+    height: 20px;
     align-items: center;
     display: none;
     background: transparent;
@@ -16,15 +15,15 @@
     }
 
     &--link {
-        width: 40px;
-        height: 5px;
+        width: 28px;
+        height: 4px;
         border-radius: 5px;
         background-color: $whitecolour;
 
         &:before, &:after {
             background-color: $whitecolour;
-            width: 40px;
-            height: 5px;
+            width: 28px;
+            height: 4px;
             border-radius: 5px;
             content: "";
             display: block;
@@ -41,7 +40,7 @@
 
 
         &--animate {
-            background: rgba(47, 50, 52, 0.99);
+            background: transparent;
             
             &:before, &:after {
                 content: "";
@@ -50,10 +49,12 @@
             }
 
             &:before {
+                background: $text-color;
                 top: 0;
             }
 
             &:after {
+                background: $text-color;
                 bottom: 0;
             }
 
@@ -70,8 +71,12 @@
             }
         }
     }
-}
 
-.hamburger__view{
-    display: flex;
+    &--animate {
+        background: transparent;
+        z-index: 20;
+        position: fixed;
+        top: 85px;
+        right: 40px;
+    }
 }

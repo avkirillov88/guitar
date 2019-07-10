@@ -1,0 +1,29 @@
+.mobile {
+
+    &__menu {
+        display: none;
+
+        @include tablets() {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $whitecolour;
+            z-index: 10;
+            padding-left: 10%;
+        }
+
+        @include phones() {
+            width: 100%;
+            padding-left: 20%;
+        }
+
+        &--view {
+            display: flex;
+        }
+    }
+}

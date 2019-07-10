@@ -14,10 +14,11 @@
             display: flex;
             width: 50%;
 
-            @include phones() {
+            @include tablets() {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
             }
         }
 
@@ -29,9 +30,15 @@
             margin-right: 60px;
             text-align: right;
 
-            @include phones() {
+            @include tablets() {
+                width: 70%;
                 margin-right: 0;
                 text-align: center;
+                margin-bottom: 20px;
+            }
+
+            @include phones() {
+                width: 100%;
             }
         }
 
@@ -43,6 +50,10 @@
                 color: $whitecolour;
                 line-height: 0.88;
                 font-weight: 800;
+
+                @include tablets() {
+                    font-size: 56px;
+                }
             }
         }
 

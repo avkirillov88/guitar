@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     justify-content: space-between;
-    padding: 100px 150px;
+    padding: 100px 30px;
     background-color: $darkpurple;
 
     @include desktop() {
@@ -46,12 +46,14 @@
     }
 
     &__year {
-        color: $purplecolour;
+        width: 100%;
         font-size: 48px;
         font-weight: 600;
-        width: 100%;
+        color: $purplecolour;
+        margin-top: -14px;
 
         @include desktop() {
+            margin-top: 0;
             margin-bottom: 10px;
         }
 
@@ -65,11 +67,12 @@
     }
 
     &__name {
+        width: 75%;
         font-size: 18px;
         font-weight: bold;
         color: $whitecolour;
         text-transform: uppercase;
-        width: 75%;
+        margin-bottom: 45px;
 
         @include desktop() {
             width: 70%;
@@ -133,8 +136,18 @@
 
     &__block {
 
+        width: 46%;
+        
+        &:first-child {
+            margin-right: 10%;
+
+            @include desktop() {
+                margin-right: 0%;
+            }
+        }
+
         @include desktop() {
-            width: 46%;
+            width: 45%;
         }
 
         @include tablets() {
@@ -169,12 +182,13 @@
     &__quote {
         margin: 0;
 
+        @include desktop() {
+            width: 100%;
+        }
+
         &--text {
             line-height: 1.71;
-
-            @include desktop() {
-                margin-bottom: 35px;
-            }
+            margin-bottom: 35px;
 
             @include tablets() {
                 margin-bottom: 20px;

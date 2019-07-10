@@ -55,6 +55,10 @@
     &__table {
         width: 100%;
         border-spacing: 15px;
+
+        @include phones() {
+            border-spacing: 0 15px;
+        }
     }
 
     &__row {

@@ -6,10 +6,30 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            padding-right: 1%;
+            margin-right: 1%;
+
+            &--header {
+                
+                @include tablets() {
+                    margin-right: 13%;
+                }
+            }
+
+            &--mobile {
+                width: 100%;
+                align-items: flex-start;
+                margin-right: 0;
+            }
         }
 
         &--link {
+
+            &--header {
+
+                @include phones() {
+                    display: none;
+                }
+            }
 
             &--footer {
                 position: relative;
@@ -31,6 +51,13 @@
 
             &:last-child {
                 margin-right: 0;
+            }
+
+            &--header {
+
+                @include tablets() {
+                    margin-right: 50px;
+                }
             }
 
             &--footer {

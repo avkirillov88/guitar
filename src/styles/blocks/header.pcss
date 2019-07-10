@@ -5,6 +5,11 @@
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 4.5%;
+    padding: 60px 40px 0 40px;
     padding-bottom: 0;
+
+    @include tablets() {
+        justify-content: flex-end;
+        padding: 60px 40px 0 40px;
+    }
 }

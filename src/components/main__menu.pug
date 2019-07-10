@@ -4,4 +4,4 @@ mixin mainmenu(mod)
             - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
             each item in menu
                 li(class='main__menu--item main__menu--item' + mod)
-                    a(href='').main__menu--link= item
+                    a(href='' class='main__menu--link main__menu--link' + mod)= item

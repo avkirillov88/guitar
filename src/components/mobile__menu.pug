@@ -1,0 +1,6 @@
+mixin mobile__menu(mod, menuItems)
+    .mobile__menu
+        include main__menu
+        +mainmenu('--mobile')
+        include socials
+        +socials('--mobile')
