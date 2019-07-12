@@ -24,6 +24,12 @@
 
         &--link {
 
+            fill: $purplecolour;
+
+            &:hover {
+                fill: $hoverlinks;
+            }
+
             &--header {
 
                 @include phones() {
@@ -41,6 +47,7 @@
                 border-radius: 50%;
 
                 &:hover {
+                    fill: $hoverlinks;
                     border-color: $hoverlinks;
                 }
             }
@@ -81,12 +88,7 @@
     }
 
     &__icon {
-        fill: $purplecolour;
         width: 27px;
-
-        &:hover {
-            fill: $hoverlinks;
-        }
 
         &--footer {
             position: absolute;

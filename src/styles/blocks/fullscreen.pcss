@@ -63,6 +63,7 @@
             font-size: 18px;
             font-weight: 600;
             color: $whitecolour;
+            fill: $whitecolour;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,6 +71,7 @@
 
             &:hover {
                 color: $hoverlinks;
+                fill: $hoverlinks;
             }
 
             @include phones() {
@@ -79,12 +81,7 @@
 
         &__icon {
             width: 35px;
-            fill: $whitecolour;
             margin-left: 15px;
-
-            &:hover {
-                fill: $hoverlinks;
-            }
         }
     }
 }
