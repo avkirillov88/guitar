@@ -69,10 +69,18 @@
             display: flex;
             right: 0;
             bottom: 17%;
-            width: 75%;
+            width: 80%;
 
             @include phones() {
                 display: none;
+            }
+        }
+
+        &--thumb {
+
+            &:hover {
+                border: 2px solid $maincolour;
+                cursor: pointer;
             }
         }
 
@@ -92,8 +100,12 @@
 
         &--arrows {
             position: absolute;
-            bottom: 9%;
+            bottom: 14.5%;
             right: -52px;
+
+            @include tablets() {
+                bottom: 11.5%;
+            }
 
             @include phones() {
                 bottom: 0;
@@ -109,6 +121,14 @@
             justify-content: center;
             background-color: #29394d;
 
+            &:hover {
+                fill: $whitecolour;
+            }
+
+            &:focus {
+                background-color: $maincolour;
+            }
+
             &--previous {
                 transform: rotate(180deg);
             }
@@ -116,12 +136,7 @@
 
         &--icon {
             width: 12px;
-            opacity: 0.3;
-            fill: #ffffff;
-
-            &:hover {
-                opacity: 1;
-            }
+            opacity: 1;
         }
     }
 
@@ -236,6 +251,13 @@
 
             @include phones() {
                 justify-content: flex-start;
+            }
+        }
+
+        &--enter {
+
+            &:hover {
+                text-decoration: underline;
             }
         }
     }

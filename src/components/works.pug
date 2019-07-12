@@ -2,10 +2,10 @@ section.works
     h3.works__title Мои работы
     .works__container
         .works__slider
-            - var selNumber = 2
-            .works__slider--number= selNumber
             .works__slider--img
                 +image('content/slider-1.jpg')
+                - var selNumber = 2
+                .works__slider--number= selNumber
                 .works__slider--thumbs
                     - var thumbs = [4, 2, 3, 1]
                     each thumb in thumbs
@@ -28,4 +28,4 @@ section.works
             .works__description--info.text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
             .works__description--link
                 +icon('link', 'works__description--icon')
-                a(href="/") Посмотреть сайт
+                a(href="/" class='works__description--enter') Посмотреть сайт

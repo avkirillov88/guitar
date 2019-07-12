@@ -1,7 +1,7 @@
 mixin mainmenu(mod)
     nav(class='main__menu main__menu' + mod)
         ul(class='main__menu--list main__menu--list' + mod)
-            - var menu = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+            - var menu = [{name: 'Главная', section: 'fullscreen'}, {name: 'Обо мне', section: 'hero'}, {name: 'Навыки', section: 'skills'}, {name: 'Работы', section: 'works'}, {name: 'Отзывы', section: 'reviews'}, {name: 'Связаться', section: 'feedback'}];
             each item in menu
                 li(class='main__menu--item main__menu--item' + mod)
-                    a(href='' class='main__menu--link main__menu--link' + mod)= item
+                    a(href=item.section class='main__menu--link main__menu--link' + mod)= item.name

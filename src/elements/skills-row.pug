@@ -3,5 +3,6 @@ mixin skills-row(rowName, skills)
         h5.skills__circles--title= rowName
         .skills__circles--info
             each item in skills
-                include skills-circle
-                +skills-circle(item)
+                .skills__circles--elem
+                    include skills-circle
+                    +skills-circle(item)
