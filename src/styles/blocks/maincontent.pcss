@@ -3,9 +3,12 @@
     &__main {
 
         &--bg {
-            /* background: url('../images/content/main-bg.jpg') center center no-repeat;
-            background-size: cover; */
             position: relative;
+
+            @include tablets() {
+                background: url('../images/content/main-bg.jpg') center center no-repeat;
+                background-size: cover;
+            }
         }
     }
 

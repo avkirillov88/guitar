@@ -6,17 +6,17 @@ section.feedback
                 label.feedback__block.feedback__block--name
                     .feedback__label--text Введите ваше имя
                     .feedback__data
-                        +icon('user', 'feedback__label--icon')
-                        input.feedback__name(type='text' name ='name' placeholder='Введите ваше Имя')
+                        //- +icon('user', 'feedback__label--icon')
+                        input.feedback__name.feedback__name--name(type='text' name ='name' placeholder='Введите ваше Имя')
                 label.feedback__block.feedback__block--email
                     .feedback__label--text Введите ваш email
                     .feedback__data
-                        +icon('envelope', 'feedback__label--icon')
-                        input.feedback__name(type='email' name ='email' placeholder='Введите ваше email')
+                        //- +icon('envelope', 'feedback__label--icon')
+                        input.feedback__name.feedback__name--email(type='email' name ='email' placeholder='Введите ваше email')
             .feedback__row
                 label.feedback__block.feedback__block--text
                     .feedback__label--text.feedback__label--text--msg Сообщение к письму
                     .feedback__data
-                        +icon('message', 'feedback__label--icon')
+                        //- +icon('message', 'feedback__label--icon')
                         textarea.feedback__name.feedback__name--text(name ='text')
             button.feedback__btn--submit(type='submit') Отправить

@@ -33,7 +33,7 @@
         }
     }
 
-    &__desc {
+    &__info {
         width: 70%;
         display: flex;
         flex-direction: column;
@@ -44,25 +44,25 @@
             width: 100%;
             order: 1;
         }
-    }
 
-    &__title {
-        font-size: 30px;
-        color: $darkpurple;
-        font-weight: bold;
-        margin-bottom: 30px;
+        &--title {
+            font-size: 30px;
+            color: $darkpurple;
+            font-weight: bold;
+            margin-bottom: 30px;
 
-        @include tablets() {
-            text-align: center;
-        }
+            @include tablets() {
+                text-align: center;
+            }
 
-        @include phones() {
-            text-align: left;
-        }
+            @include phones() {
+                text-align: left;
+            }
 
-        &--desc {
+        &--text {
             color: $text-color;
             padding-top: 20px;
+        }
         }
     }
 
@@ -112,8 +112,8 @@
         }
 
         &--item {
-            width: 134px;
-            height: 134px;
+            width: 140px;
+            height: 140px;
             margin-right: 40px;
             fill: $whitecolour;
 
@@ -130,12 +130,20 @@
                 margin-right: 0;
             }
         }
+
+        &--text {
+            fill: $text-color;
+        }
     }
 
     &__circle {
 
         &--internal {
             stroke: $lightergrey;
+            stroke-width: 20;
+        }
+
+        &--external {
             stroke-width: 20;
         }
     }

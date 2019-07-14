@@ -111,8 +111,6 @@
     &__data {
         display: flex;
         align-items: center;
-        border-bottom: solid 2px $whitecolour;
-        padding-bottom: 12px;
     }
 
     &__label {
@@ -137,8 +135,8 @@
             &--msg {
 
                 @include phones {
-                margin-bottom: 0;
-            }
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -150,7 +148,11 @@
     }
 
     &__name {
+        width: 100%;
+        padding-left: 42px;
+        padding-bottom: 12px;
         border: none;
+        border-bottom: solid 2px $whitecolour;
         background: transparent;
         font-size: 18px;
         font-weight: bold;
@@ -159,11 +161,32 @@
 
         &:focus {
             outline: none;
+            border-bottom-color: $maincolour;
+        }
+
+        &--name {
+            background: svg-load('user.svg', fill=$whitecolour, width=30px) 0% 25% no-repeat;
+
+            &:focus {
+                background: svg-load('user.svg', fill=$maincolour, width=30px) 0% 25% no-repeat;
+            }
+        }
+
+        &--email {
+            background: svg-load('envelope.svg', fill=$whitecolour, width=30px) 0% 25% no-repeat;
+
+            &:focus {
+                background: svg-load('envelope.svg', fill=$maincolour, width=30px) 0% 25% no-repeat;
+            }
         }
 
         &--text {
             resize: none;
-            width: 50%;
+            background: svg-load('message.svg', fill=$whitecolour, width=30px) 0% 50% no-repeat;
+
+            &:focus {
+                background: svg-load('message.svg', fill=$maincolour, width=30px) 0% 50% no-repeat;
+            }
 
             @include phones() {
                 width: 100%;
